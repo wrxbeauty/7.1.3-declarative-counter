@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// Import React and useState 
+import React from 'react'
+import { useState } from 'react'
 
+// Create new function App
+// Create a new line and invoke the useState function
+// Interpolate the counter into an h1 tag
+// Invoke counter and make it a global variable
 function App() {
+  let [counter, changeCounter] = useState(1)
+  window.changeCounter = changeCounter
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{counter}</h1>
+      <h4>{counter}</h4>
     </div>
-  );
+
+  )
 }
 
 export default App;
